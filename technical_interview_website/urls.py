@@ -1,0 +1,37 @@
+from django.urls import path
+
+from . import views
+
+urlpatterns=[
+    path('',views.landingpage,name="landingpage"),
+    path('questionnaire_setup',views.questionnairesetup,name="questionnairesetup"),
+    path('add_questions',views.add_questions,name="add_questions"),
+    path('feedback/',views.feedbackpage,name="feedback"),
+    path('conclude/',views.concludepage,name="concludepage"),
+    path('checkmedia',views.checkmedia,name="checkmedia"),
+    path('adminn',views.adminn,name="adminn"),
+    path('interview',views.interview,name="interview"),
+    path('update_session',views.update_session,name="update_session"),
+    path('admin_login',views.admin_login,name="admin_login"),
+    path('admin_editprofile',views.admin_editprofile,name="admin_editprofile"),
+    path('admin_signup',views.admin_signup,name="admin_signup"),
+    path('candidate_signup',views.candidate_signup,name="candidate_signup"),
+    path('candidate_login',views.candidate_login,name="candidate_login"),
+    path('complete_candidate_info',views.complete_candidate_info,name="complete_candidate_info"),
+    path('candidate_editprofile',views.candidate_editprofile,name="candidate_editprofile"),
+    path('emailconfirmation',views.email_confirmation,name="email_confirmation"),
+    path('candidate_panel',views.candidate_panel,name="candidate_panel"),
+    path('instructions/<str:pk>/',views.instructions,name="instructions"),
+    path('admin_home',views.admin_home,name="admin_home"),
+    path('view_questions',views.view_questions,name="view_questions"),
+    path('display_interview/<str:pk>/',views.display_interview,name="display_interview"),
+    path('view_or_add_questions',views.view_or_add_questions,name="view_or_add_questions"),
+    path('view_or_add_candidates',views.view_or_add_candidates,name="view_or_add_candidates"),
+    path('view_candidates',views.view_candidates,name="view_candidates"),
+    path('create_interview',views.create_interview,name="create_interview"),
+    path('router',views.router,name="router"),
+    path('router1',views.router1,name="router1"),
+    path('view_or_create_questionnaires',views.view_or_create_questionnaires,name="view_or_create_questionnaires"),
+    path('View_Questionnaires',views.View_Questionnaires,name="View_Questionnaires"),
+    path('View_Question/<str:pk>/',views.View_Question,name="View_Question"),
+]
